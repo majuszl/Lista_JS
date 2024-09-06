@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+// 4. Faça um Programa que leia um vetor de 10 caracteres, e diga quantas consoantes foram lidas. Imprima as consoantes.
+    
+    var conso = 0
+    var contar = 0
+    vetor = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+    vogais = ['a', 'e', 'i', 'o', 'u']
+
+    alert('Este é o vetor original: ' + vetor)
+
+    for(i in vetor) {
+            contar = contar * 0
+            for(a in vogais) {
+                if (vetor[i] != vogais[a]) {
+                contar = contar + 1
+                 if(contar == 5) {
+                        conso = conso + 1
+                }}
+    }
+}
+    
+    alert('No total, existem: ' + conso + ' consoantes')
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

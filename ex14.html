@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+// 14. Utilizando listas faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+// "Telefonou para a vítima?"
+// "Esteve no local do crime?"
+// "Mora perto da vítima?"
+// "Devia para a vítima?"
+// "Já trabalhou com a vítima?"
+// O programa deve no final emitir uma classificação sobre a participação da pessoa no
+// crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada
+// como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    
+    lista = []
+    var soma = 0
+
+    p1 = prompt('Você telefonou para a vítima (Digite 0 para não e 1 para sim)? ')
+    p2 = prompt('Esteve no local do crime (Digite 0 para não e 1 para sim)? ')
+    p3 = prompt('Mora perto da vítima (Digite 0 para não e 1 para sim)? ')
+    p4 = prompt('Devia para a vítima (Digite 0 para não e 1 para sim)? ')
+    p5 = prompt('Já trabalhou com a vítima (Digite 0 para não e 1 para sim)? ')
+
+    lista.push(p1)
+    lista.push(p2)
+    lista.push(p3)
+    lista.push(p4)
+    lista.push(p5)
+
+    for (i in lista) {
+        var soma = lista[i] + soma
+        if (soma == 2) {
+            alert('Você é suspeito(a)!')
+        } else if (soma == 3) {
+            alert('Você é cumplice!')
+        } else if (soma == 4) {
+            alert('Você é cúmplice!')
+        } else if (soma >= 5) {
+            alert('Você foi o assassino!')
+        } else {
+            alert('Inocente! (;')
+        }
+    }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

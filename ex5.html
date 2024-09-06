@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+// 5. Faça um Programa que leia 20 números inteiros e armazene-os num vetor. Armazene
+// os números pares no vetor PAR e os números ÌMPARES no vetor impar. Imprima os três vetores.
+    
+
+var vetor = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
+var vetorpar = [];
+var vetorimpar = [];
+
+for (var i = 0; i < vetor.length; i++) {
+    if (vetor[i] % 2 == 0) {
+        vetorpar.push(vetor[i]);
+    } else {
+        vetorimpar.push(vetor[i]);
+    }
+}
+
+alert('Esse é o vetor original: ' + vetor);
+alert('Vetor par: ' + vetorpar);
+alert('Vetor ímpar: ' + vetorimpar);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

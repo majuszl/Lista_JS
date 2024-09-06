@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+// 7. Faça um Programa que leia um vetor de 5 números inteiros, mostre a soma, a multiplicação e os números.
+    
+    var soma = 0
+    var mult = 1
+
+    vetor = [2, 4, 6, 8, 10] 
+
+
+    for (i in vetor) {
+        var soma = vetor[i] + soma
+        var mult = vetor[i] * mult
+    }
+
+    alert('Essa é a lista original: ' + vetor)
+    alert('A soma é: ' + soma)
+    alert('A multiplicação dos números é: ' + mult)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

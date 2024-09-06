@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+// 13. Faça um programa que receba a temperatura média de cada mês do ano e armazene-
+// as em uma lista. Após isto, calcule a média anual das temperaturas e mostre todas as
+// temperaturas acima da média anual, e em que mês elas ocorreram (mostrar o mês por
+// extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).
+
+    lista = []
+    var media = 0
+
+    jan = prompt('Insira a temperatura do mês de janeiro: ')
+    fev = prompt('Insira a temperatura do mês de fevereiro: ')
+    mar = prompt('Insira a temperatura do mês de março: ')
+    abr = prompt('Insira a temperatura do mês de abril: ')
+    mai = prompt('Insira a temperatura do mês de maio: ')
+    jun = prompt('Insira a temperatura do mês de junho: ')
+    jul = prompt('Insira a temperatura do mês de julho: ')
+    ago = prompt('Insira a temperatura do mês de agosto: ')
+    set = prompt('Insira a temperatura do mês de setembro: ')
+    out = prompt('Insira a temperatura do mês de outubro: ')
+    nov = prompt('Insira a temperatura do mês de novembro: ')
+    dez = prompt('Insira a temperatura do mês de dezembro: ')
+    
+    lista.push(jan)
+    lista.push(fev)
+    lista.push(mar)
+    lista.push(abr)
+    lista.push(mai)
+    lista.push(jun)
+    lista.push(jul)
+    lista.push(ago)
+    lista.push(set)
+    lista.push(out)
+    lista.push(nov)
+    lista.push(dez)
+
+    for (i in lista) {
+        var media = (lista[i] + media) / 12
+            alert('Esta foi a média anual: ' + media)
+
+        if (lista[i] > media) {
+            alert('As temperaturas acima da média foram: ' + lista[i])
+        }
+    }
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
