@@ -9,30 +9,37 @@
 // 6. Faça um Programa que peça as quatro notas de 10 alunos, calcule e armazene num
 //vetor a média de cada aluno, imprima o número de alunos com média maior ou igual a 7.0.
     
-    vetor = [] // criando vetor para as médias futuras
+    var medias = [] // criando vetor 
+    var alnota = [] // criando vetor
 
-    var soma1 = 0
-    var media1 = 0
+    // variáveis
+    var cont = 0
+    var soma = 0
+    var media = 0
+
+    // laço de repetição para o número de alunos
+    for (i = 0; i < 10; i++) {
+        alnota = []
+        // laço de repetição para o número de notas
+        for (a = 0; a < 4; a++) { 
+            var nota = parseFloat(prompt('Digite a nota ' + (a + 1) + ' do aluno ' + (i + 1) + ' :')); // solicitando notas
+            alnota.push(nota) // adicionando à lista de alunos
+        }
+
+        var soma = (alnota[0] + alnota[1] + alnota[2] + alnota[3]) + soma // somando notas
+        var media = (soma / 4) + media // aplicando divisão para a média
+        medias.push(media) // adicionando à lista de médias
+    }
+
+   // laço de repetição para cada elemento da lista média
+    for (var i = 0; i < medias.length; i++) {
+        if (medias[i] >= 7.0) { // averiguando se é maior ou igual a 7
+            cont++; // adicionando à variável cont
+        }
+    }
+
+    alert("O número de alunos que têm notas maiores ou iguais a 7 é: " + cont); // exibindo a saída com número de bons alunos
     
-    for (i in )
-    al1nota1 = prompt('Digite 4 notas inteiras de 10 alunos (digite uma e dê "ok"), e te devolverei a média delas: ')
-    al1nota2 = prompt('Digite outra e dê "ok":')
-    al1nota3 = prompt('Digite outra e dê "ok":')
-    al1nota4 = prompt('Digite a última deste aluno e dê "ok":')
-
-    al1nota1 = parseInt(al1nota1);
-    al1nota2 = parseInt(al1nota2);
-    al1nota3 = parseInt(al1nota3);
-    al1nota4 = parseInt(al1nota4);
-
-    var soma1 = (al1nota1 + al1nota2 + al1nota3 + al1nota4) + soma
-    var media1 = soma / 4 
-
-
-
-
-
-
     </script>
 </head>
 <body>
