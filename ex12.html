@@ -9,6 +9,42 @@
 // 12. Foram anotadas as idades e alturas de 30 alunos. Faça um Programa que determine
 // quantos alunos com mais de 13 anos possuem altura inferior à média de altura desses alunos.
 
+        // listas
+        idade = [12, 12, 13, 15, 16, 12, 14, 10, 17, 18, 16, 16, 16, 16, 15, 12, 12, 13, 15, 16, 12, 14, 10, 17, 18, 16, 16, 16, 16, 15  ]
+        alt = [1.68, 1.50, 1.70, 1.70, 1.75, 1.60, 1.54, 1.70, 1.80, 1.55, 1.69, 1.72, 1.56, 1.65, 1.67, 1.68, 1.55, 1.70, 1.70, 1.75, 1.60, 1.54, 1.70, 1.80, 1.55, 1.69, 1.72, 1.56, 1.65, 1.67]
+        
+        // exibindo listas
+        alert('Essas são as idades dos alunos: ' + idade)
+        alert('Essas são as alturas dos alunos: ' + alt)
+
+
+        // variáveis
+        var soma = 0
+        var media = 0
+        var al_13anos = 0
+
+        // somando elementos do alt e armazenando o valor em soma
+        for (i = 0 ; i < alt.length; i++) {
+            soma += alt[i]
+        }
+
+        // calculando média
+        var media = (soma / 30) + media
+
+        // exibindo média para o usuário
+        alert('A média das alturas é: ' + media)
+
+        // verificando quantidade de alunos com mais de treze anos com altura inferior à média
+        for (i = 0; i < idade.length; i++) {
+            if (idade[i] > 13 && alt[i] < media) {
+                al_13anos++;
+            }
+        }
+
+        // exibindo saída formatada
+        alert('Essa é a quantidade de alunos com mais de 13 anos que possuem altura inferior à média de suas alturas: ' + al_13anos)
+        
+
 
 
 

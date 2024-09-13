@@ -11,43 +11,71 @@
 // temperaturas acima da média anual, e em que mês elas ocorreram (mostrar o mês por
 // extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).
 
+    // listas
     lista = []
+    meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+    acima_media = []
+
+    // variáveis
+    var soma = 0
     var media = 0
 
-    jan = prompt('Insira a temperatura do mês de janeiro: ')
-    fev = prompt('Insira a temperatura do mês de fevereiro: ')
-    mar = prompt('Insira a temperatura do mês de março: ')
-    abr = prompt('Insira a temperatura do mês de abril: ')
-    mai = prompt('Insira a temperatura do mês de maio: ')
-    jun = prompt('Insira a temperatura do mês de junho: ')
-    jul = prompt('Insira a temperatura do mês de julho: ')
-    ago = prompt('Insira a temperatura do mês de agosto: ')
-    set = prompt('Insira a temperatura do mês de setembro: ')
-    out = prompt('Insira a temperatura do mês de outubro: ')
-    nov = prompt('Insira a temperatura do mês de novembro: ')
-    dez = prompt('Insira a temperatura do mês de dezembro: ')
-    
-    lista.push(jan)
-    lista.push(fev)
-    lista.push(mar)
-    lista.push(abr)
-    lista.push(mai)
-    lista.push(jun)
-    lista.push(jul)
-    lista.push(ago)
-    lista.push(set)
-    lista.push(out)
-    lista.push(nov)
-    lista.push(dez)
 
-    for (i in lista) {
-        var media = (lista[i] + media) / 12
-            alert('Esta foi a média anual: ' + media)
+    // laço de repetição 
+    for (i = 0; i < 12; i++) {
+        temp = parseFloat(prompt('Digite a temperatura do mês ' + (i + 1) + ' :'));
+        lista.push(temp);
 
-        if (lista[i] > media) {
-            alert('As temperaturas acima da média foram: ' + lista[i])
-        }
+        var soma = lista[i] + soma // soma
+        var media = (soma / 12) + media // aplicando divisão para a média
     }
+
+    // laço de repetição
+    for (i = 0; i < lista.length; i++) {
+            if (lista[i] > media) {
+                acima_media.push(lista[i]);
+            }
+        }
+
+    alert(); 
+
+    
+    
+    
+    // jan = prompt('Insira a temperatura do mês de janeiro: ')
+    // fev = prompt('Insira a temperatura do mês de fevereiro: ')
+    // mar = prompt('Insira a temperatura do mês de março: ')
+    // abr = prompt('Insira a temperatura do mês de abril: ')
+    // mai = prompt('Insira a temperatura do mês de maio: ')
+    // jun = prompt('Insira a temperatura do mês de junho: ')
+    // jul = prompt('Insira a temperatura do mês de julho: ')
+    // ago = prompt('Insira a temperatura do mês de agosto: ')
+    // set = prompt('Insira a temperatura do mês de setembro: ')
+    // out = prompt('Insira a temperatura do mês de outubro: ')
+    // nov = prompt('Insira a temperatura do mês de novembro: ')
+    // dez = prompt('Insira a temperatura do mês de dezembro: ')
+    
+    // lista.push(jan)
+    // lista.push(fev)
+    // lista.push(mar)
+    // lista.push(abr)
+    // lista.push(mai)
+    // lista.push(jun)
+    // lista.push(jul)
+    // lista.push(ago)
+    // lista.push(set)
+    // lista.push(out)
+    // lista.push(nov)
+    // lista.push(dez)
+
+    // for (i in lista) {
+    //     var media = (lista[i] + media) / 12
+    //         alert('Esta foi a média anual: ' + media)
+
+    //     if (lista[i] > media) {
+    //         alert('As temperaturas acima da média foram: ' + lista[i])
+    //     }
+    // }
 
 
 
